@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  
+<meta charset="UTF-8">
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/
+css?family=Shrikhand|Righteous">
+  
+<title>Happy Independence Day</title>
+
+  
+<style>
+ 
+#p1{
+	animation:roll1 5s infinite;
+	position:relative;
+	z-index:1;
+	width:10%;
+	height:30%;
+}
+#p2{
+	animation:roll1 5s infinite;
+	position:relative;
+	z-index:2;
+	width:30%;
+	height:60%;
+}
+#p3{
+	animation:roll1 5s infinite;
+	position:relative;
+	z-index:1;
+	width:20%;
+	height:50%;
+}
+#txt{
+	position:absolute;
+	z-index:3;
+	color:blue;
+	font-size:5rem;
+	font-family:Shrikhand;		
+	top:40%;
+	padding:0 7% 0 7%;
+	text-align:center;
+	text-shadow: 5px 5px white;
+	animation:txtanimate 2s;
+	
+}
+#txt:hover{
+	text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+	color:#000;
+}
+@keyframes roll1{
+	0%{
+		transform:translateX(100px) scale(1.2) translateY(50px) perspective(700px);
+		opacity:0;
+	}
+	
+	50%{
+		transform:translateX(500px) scale(2) translateY(50px) perspective(500px);
+		opacity:1;
+	}
+	100%{
+		transform:translateX(1200px) scale(1.2) translateY(50px) perspective(500px);
+		opacity:0;
+	}
+
+}
+.txt:nth-child(1){
+    animation-delay: 0.1s;
+}
+.txt:nth-child(2){
+    animation-delay: 0.5s;
+}
+.txt:nth-child(3){
+    animation-delay: 1.0s;
+}
+.txt:nth-child(4){
+    animation-delay: 1.5s;
+}
+.txt:nth-child(5){
+    animation-delay: 2.0s;
+}
+@keyframes txtanimate{
+	0%{
+		transform:scale(0);
+		opacity:0;
+		
+	}
+	
+	100%{
+		opacity:1;
+		transform:scale(1);
+	}
+
+}
+
+@media screen and (max-width:425px){
+	#p1{
+		width:10%;
+		height:10%;
+	}
+	#p2{
+		width:30%;
+		height:30%;
+	}
+	#p3{
+		width:15%;
+		height:15%;
+	}
+	#txt{
+		font-size:30px;	
+		padding:0 7% 0 7%;
+	}
+	@keyframes roll1{
+	0%{
+		transform:translateX(20%) scale(1.2) translateY(50px);
+		opacity:0;
+	}
+	
+	50%{
+		transform:translateX(70%) scale(2) translateY(50px);
+		opacity:1;
+	}
+	100%{
+		transform:translateX(120%) scale(1.2) translateY(50px);
+		opacity:0;
+	}
+
+	}
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+  
+  
+<div style="border:3px solid black;height:95vh;width:100%;background:linear-gradient(#F4C430,white,#8DF30C);overflow-X:hidden;overflow-y:hidden;">
+<img id="p1" src="images/parachute3.png" style="">
+<img id="p2" src="images/parachute1.png" style="">
+<img id="p3" src="images/parachute2.png" style="">
+<div id="txt">HAPPY INDEPENDENCE DAY</div>
+
+</div>
+</body>
+
+</html>
